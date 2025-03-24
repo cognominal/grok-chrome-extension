@@ -2,6 +2,10 @@
 const homePageAriaLabel = 'Home page';
 const grokTextareaAriaLabel = 'Ask Grok anything';
 
+const prompt = `
+write each sentence in russian then in english
+`
+
 function getAriaElt(label) {
     return document.querySelector(`[aria-label="${label}"]`);
 }
@@ -31,7 +35,7 @@ function setupInputBox() {
 
             // Sync input box -> textarea
             inputBox.addEventListener('input', () => {
-                grokTextarea.value = inputBox.value;
+                grokTextarea.value = inputBox.value + prompt;
                 // Trigger input event on textarea to notify any native listeners
                 grokTextarea.dispatchEvent(new Event('input', { bubbles: true }));
             });

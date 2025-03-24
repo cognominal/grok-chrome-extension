@@ -4,8 +4,12 @@
     "version": "1.0",
     "description": "Adds a text input box at the top of grok.com pages",
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "sidePanel"
     ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
     "background": {
         "service_worker": "background.js"
     },
