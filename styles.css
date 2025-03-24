@@ -1,0 +1,16 @@
+#grok-input-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+#grok-input-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 8px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

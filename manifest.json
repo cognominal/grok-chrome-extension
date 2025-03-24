@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Grok Input Box",
+    "version": "1.0",
+    "description": "Adds a text input box at the top of grok.com pages",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.grok.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ]
+}
